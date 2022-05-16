@@ -26,6 +26,8 @@ var cp = 0;
 var register = 1;
 var login = 1;
 const regex = /\s+/g;
+const Sregex = /^[^a-zA-Z0-9]+$/;
+const Nregex = /^[^a-zA-Z]+$/;
 
 
 
@@ -40,6 +42,7 @@ function validate(element, value) {
         else if (u.match(regex)) { username.innerHTML = "*Do not using space in username"; register = 0; }
         else if(isNaN(u) == false){ username.innerHTML = "*Username cannot be number"; register = 0; }
         else if(Sregex.test(u)){ username.innerHTML = "*Username cannot be symbols"; register = 0; }
+        else if(Nregex.test(u)){ username.innerHTML = "*Username should contain alphabets"; register = 0; }
         else { username.innerHTML = ""; register = 1; }
     }
     else { username.innerHTML = ""; }
