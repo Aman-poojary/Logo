@@ -48,9 +48,9 @@ function validate(element, value) {
 
     if (p) {
         if (p.length <= 3) { password.innerHTML = "*Password is too short"; }
-        else if (p === "1234" || p === "abcd" || p === "password") { password.innerHTML = "*Password not strong, try different password"; register = 0; }
-        else if (u.match(regex)) { username.innerHTML = "*Try different password"; register = 0; }
-        else if(Sregex.test(u)){ username.innerHTML = "*Try different password"; register = 0; }
+         else if (p === "1234" || p === "abcd" || p === "password") { password.innerHTML = "*Password not strong, try different password"; register = 0; }
+        else if (p.match(regex)) { password.innerHTML = "*Do not use space in password"; register = 0; }
+        else if(Sregex.test(p)){ password.innerHTML = "*Try different password"; register = 0; }
         else { password.innerHTML = ""; register = 1; }
     }
     else { password.innerHTML = ""; }
