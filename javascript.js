@@ -55,18 +55,10 @@ function logon(element, value) {
 }
 
 
-
-
-
-
-
-
-
-
 form1.addEventListener('submit', (e) => {
     e.preventDefault();
     if (cp) {
-        if (p != cp) { cpassword.innerHTML = "*Incoorect password"; register = 0; }
+        if (p != cp) { cpassword.innerHTML = "*Incorrect password"; register = 0; }
         else { cpassword.innerHTML = ""; register = 1; }
     }
     else { cpassword.innerHTML = ""; }
@@ -100,7 +92,7 @@ form2.addEventListener('submit', (e) => {
         }, 2000);
     }
     else {
-        document.querySelector('.form__message--error2').innerHTML = "Incorrect username/password combination";
+        document.querySelector('.form__message--error2').innerHTML = "Invalid username/password combination";
         document.getElementById("l-content").style = "box-shadow :0 0 100px 2px var(--color-error);";
         setTimeout(() => {
             document.querySelector('.form__message--error2').innerHTML = "";
