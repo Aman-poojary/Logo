@@ -38,6 +38,8 @@ function validate(element, value) {
         console.log(u.length);
         if (u.length <= 4 || u.length >20 ) { username.innerHTML = "*Username must be between 5 to 20 characters"; register = 0; }
         else if (u.match(regex)) { username.innerHTML = "*Do not using space in username"; register = 0; }
+        else if(isNaN(u) == false){ username.innerHTML = "*Username cannot be number"; register = 0; }
+        else if(Sregex.test(u)){ username.innerHTML = "*Username cannot be symbols"; register = 0; }
         else { username.innerHTML = ""; register = 1; }
     }
     else { username.innerHTML = ""; }
