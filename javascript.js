@@ -36,8 +36,7 @@ function validate(element, value) {
     p = document.getElementById('password').value
     cp = document.getElementById('cpassword').value
 
-    if (u) {
-        console.log(u.length);
+   if (u) {
         if (u.length <= 4 || u.length >20 ) { username.innerHTML = "*Username must be between 5 to 20 characters"; register = 0; }
         else if (u.match(regex)) { username.innerHTML = "*Do not using space in username"; register = 0; }
         else if(isNaN(u) == false){ username.innerHTML = "*Username cannot be number"; register = 0; }
