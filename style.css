@@ -65,6 +65,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 7rem;
     justify-items: center;
+    margin-top: 8%;
 }
 
 }
@@ -268,7 +269,7 @@ span {
 @media screen and (max-width: 900px) {
     .container {
         grid-template-columns: 1fr;
-        margin-top: 100px;
+        margin-top: 51%;
         justify-items: center;
     }
 
